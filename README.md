@@ -1,18 +1,18 @@
-# 🤖 Screenshare LLM Assistant
+# Screenshare LLM Assistant
 
 **Real-time OCR analysis with LLM integration for enhanced screensharing experiences**
 
-## 🎯 Features
+## Features
 
-- **🎥 Real-time OCR**: Capture and analyze screen content during Discord screenshares
-- **🤖 LLM Integration**: AI assistant analyzes screen content and provides insights
-- **💬 Interactive GUI**: Dark-themed chat window for real-time interaction
-- **🎹 Keystroke Logging**: Privacy-aware activity tracking (optional)
-- **🏥 Health Monitoring**: System health tracking with automatic recovery
-- **⚙️ Systemd Integration**: Run as a system service with automatic startup
-- **🔒 Privacy Features**: Password field detection and window exclusion rules
+- ** Real-time OCR**: Capture and analyze screen content during Discord screenshares
+- ** LLM Integration**: AI assistant analyzes screen content and provides insights
+- ** Interactive GUI**: Dark-themed chat window for real-time interaction
+- ** Keystroke Logging**: Privacy-aware activity tracking (optional)
+- ** Health Monitoring**: System health tracking with automatic recovery
+- **️ Systemd Integration**: Run as a system service with automatic startup
+- ** Privacy Features**: Password field detection and window exclusion rules
 
-## 📋 Installation
+## Installation
 
 ### Prerequisites
 
@@ -23,7 +23,7 @@ sudo apt install tesseract-ocr python3-venv python3-pip xdotool curl
 
 # Optional: For better keystroke monitoring
 sudo apt install python3-evdev
-sudo usermod -a -G input $USER  # For evdev support
+sudo usermod -a -G input $USER # For evdev support
 ```
 
 ### Setup
@@ -39,7 +39,7 @@ source venv/bin/activate
 python3 screenshare_assistant_launcher.py --test-llm "Hello"
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option 1: GUI Application
 
@@ -69,31 +69,31 @@ systemctl --user status screenshare-llm.service
 python3 screenshare_assistant_launcher.py --headless
 ```
 
-## ⚙️ Configuration
+## ️ Configuration
 
 Edit `~/.config/screenshare-assistant/config.json`:
 
 ```json
 {
-  "llm": {
-    "provider": "ollama",
-    "model": "llama3.2:latest",
-    "api_url": "http://localhost:11434/api/generate"
-  },
-  "ocr": {
-    "regions": [
-      {"name": "main_screen", "x": 100, "y": 100, "width": 1200, "height": 800}
-    ],
-    "fps": 4
-  },
-  "keystroke_logging": {
-    "enabled": false,
-    "exclude_windows": [".*password.*", "KeePass.*"]
-  },
-  "gui": {
-    "theme": "dark",
-    "always_on_top": true
-  }
+ "llm": {
+ "provider": "ollama",
+ "model": "llama3.2:latest",
+ "api_url": "http/localhost:11434/api/generate"
+ },
+ "ocr": {
+ "regions": [
+ {"name": "main_screen", "x": 100, "y": 100, "width": 1200, "height": 800}
+ ],
+ "fps": 4
+ },
+ "keystroke_logging": {
+ "enabled": false,
+ "exclude_windows": [".*password.*", "KeePass.*"]
+ },
+ "gui": {
+ "theme": "dark",
+ "always_on_top": true
+ }
 }
 ```
 
@@ -104,11 +104,11 @@ Define screen areas to monitor:
 - **Center Area**: `{"x": 400, "y": 300, "width": 1120, "height": 480}`
 - **Multiple Regions**: Add multiple objects to the `regions` array
 
-## 🔒 Privacy & Security
+## Privacy & Security
 
 ### Keystroke Logging
 
-**⚠️ Privacy Notice**: Keystroke logging is **disabled by default** and requires explicit activation.
+**️ Privacy Notice**: Keystroke logging is **disabled by default** and requires explicit activation.
 
 **What is logged**:
 - Keystroke timing and frequency
@@ -124,14 +124,14 @@ Define screen areas to monitor:
 **Exclusion Rules**:
 ```json
 {
-  "keystroke_logging": {
-    "exclude_windows": [
-      ".*password.*",
-      ".*login.*", 
-      "KeePass.*",
-      "Bitwarden.*"
-    ]
-  }
+ "keystroke_logging": {
+ "exclude_windows": [
+ ".*password.*",
+ ".*login.*",
+ "KeePass.*",
+ "Bitwarden.*"
+ ]
+ }
 }
 ```
 
@@ -148,7 +148,7 @@ Define screen areas to monitor:
 - Health logs: 30 days with rotation
 - Automatic cleanup on startup
 
-## 🖥️ Usage Scenarios
+## ️ Usage Scenarios
 
 ### 1. Discord Screenshare with AI Analysis
 
@@ -174,12 +174,12 @@ Define screen areas to monitor:
 
 ### 4. Educational Content
 
-1. Share technical documentation or tutorials  
+1. Share technical documentation or tutorials
 2. AI explains complex concepts as they appear
 3. Interactive assistance for viewers
 4. Real-time text extraction for accessibility
 
-## 🔧 Systemd Service Management
+## Systemd Service Management
 
 ### Service Commands
 
@@ -187,7 +187,7 @@ Define screen areas to monitor:
 # Start service
 systemctl --user start screenshare-llm.service
 
-# Stop service  
+# Stop service
 systemctl --user stop screenshare-llm.service
 
 # Restart service
@@ -217,7 +217,7 @@ python3 health_monitor.py check
 cat ~/.local/share/screenshare-assistant/health.json
 ```
 
-## 🛠️ Troubleshooting
+## ️ Troubleshooting
 
 ### Common Issues
 
@@ -233,7 +233,7 @@ python3 -c "import mss; print('Screen capture:', bool(mss.mss()))"
 **2. LLM Connection Failed**
 ```bash
 # Check Ollama is running
-curl http://localhost:11434/api/version
+curl http/localhost:11434/api/version
 
 # Start Ollama if needed
 ollama serve
@@ -287,10 +287,10 @@ tail -f ~/.local/share/screenshare-assistant/logs/keystrokes-$(date +%Y-%m-%d).j
 journalctl --user -u screenshare-llm.service --since "1 hour ago"
 ```
 
-## 🔗 Integration with Modular Deepdive Tools
+## Integration with Modular Deepdive Tools
 
 This assistant integrates with your existing toolkit at:
-- **Main Tools**: `https://github.com/justkidding-scripts/utility-tools`
+- **Main Tools**: `https/github.com/justkidding-scripts/utility-tools`
 - **Existing Scripts**: Compatible with current modular framework
 - **Extension Points**: OCR callbacks, LLM providers, GUI plugins
 
@@ -299,20 +299,20 @@ This assistant integrates with your existing toolkit at:
 ```python
 # Custom LLM provider
 def custom_llm_handler(prompt):
-    # Your existing LLM integration
-    return custom_response
+ # Your existing LLM integration
+ return custom_response
 
 assistant.llm_query_callback = custom_llm_handler
 
-# OCR data forwarding  
+# OCR data forwarding
 def forward_to_existing_tools(ocr_frame):
-    # Send to your existing pipeline
-    existing_tool.process_ocr(ocr_frame.text)
+ # Send to your existing pipeline
+ existing_tool.process_ocr(ocr_frame.text)
 
 assistant.ocr_bridge.add_text_callback(forward_to_existing_tools)
 ```
 
-## 📊 Performance Optimization
+## Performance Optimization
 
 ### Resource Usage
 
@@ -324,24 +324,24 @@ assistant.ocr_bridge.add_text_callback(forward_to_existing_tools)
 ### Optimization Tips
 
 1. **Reduce OCR FPS**: Lower `fps` in config for less CPU usage
-2. **Limit Regions**: Monitor only relevant screen areas  
+2. **Limit Regions**: Monitor only relevant screen areas
 3. **Disable Logging**: Turn off keystroke logging if not needed
 4. **Local LLM**: Use Ollama to avoid API latency
 5. **Headless Mode**: Run without GUI for servers/remote systems
 
-## 📝 Advanced Configuration
+## Advanced Configuration
 
 ### Multiple OCR Regions
 
 ```json
 {
-  "ocr": {
-    "regions": [
-      {"name": "code_area", "x": 50, "y": 100, "width": 800, "height": 600},
-      {"name": "terminal", "x": 900, "y": 100, "width": 600, "height": 400},
-      {"name": "browser", "x": 50, "y": 750, "width": 1450, "height": 300}
-    ]
-  }
+ "ocr": {
+ "regions": [
+ {"name": "code_area", "x": 50, "y": 100, "width": 800, "height": 600},
+ {"name": "terminal", "x": 900, "y": 100, "width": 600, "height": 400},
+ {"name": "browser", "x": 50, "y": 750, "width": 1450, "height": 300}
+ ]
+ }
 }
 ```
 
@@ -349,11 +349,11 @@ assistant.ocr_bridge.add_text_callback(forward_to_existing_tools)
 
 ```json
 {
-  "llm": {
-    "provider": "openai",
-    "model": "gpt-4",
-    "api_key_env": "OPENAI_API_KEY"
-  }
+ "llm": {
+ "provider": "openai",
+ "model": "gpt-4",
+ "api_key_env": "OPENAI_API_KEY"
+ }
 }
 ```
 
@@ -361,39 +361,39 @@ assistant.ocr_bridge.add_text_callback(forward_to_existing_tools)
 
 ```json
 {
-  "keystroke_logging": {
-    "exclude_windows": [
-      ".*[Pp]assword.*",
-      ".*[Ll]ogin.*",
-      ".*[Aa]uthenticate.*", 
-      "KeePass.*",
-      "Bitwarden.*",
-      "1Password.*",
-      "LastPass.*",
-      ".*SSH.*",
-      ".*Terminal.*sudo.*"
-    ]
-  }
+ "keystroke_logging": {
+ "exclude_windows": [
+ ".*[Pp]assword.*",
+ ".*[Ll]ogin.*",
+ ".*[Aa]uthenticate.*",
+ "KeePass.*",
+ "Bitwarden.*",
+ "1Password.*",
+ "LastPass.*",
+ ".*SSH.*",
+ ".*Terminal.*sudo.*"
+ ]
+ }
 }
 ```
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This tool is part of a larger modular framework. For contributions:
 
 1. Follow existing code patterns from utility-tools repository
-2. Maintain compatibility with current module system  
+2. Maintain compatibility with current module system
 3. Add appropriate logging and health checks
 4. Include privacy considerations for any new features
 
-## 📄 License
+## License
 
 Licensed under the same terms as the main utility-tools project.
 
 ---
 
-**⚡ Ready to enhance your screenshares with AI-powered analysis!**
+** Ready to enhance your screenshares with AI-powered analysis!**
 
-**🎯 Perfect for educational content, live coding, research presentations, and technical demonstrations.**
+** Perfect for educational content, live coding, research presentations, and technical demonstrations.**

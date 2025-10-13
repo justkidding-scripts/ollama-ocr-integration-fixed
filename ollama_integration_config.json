@@ -1,20 +1,20 @@
 {
-  "ollama": {
-    "base_url": "http://localhost:11434",
-    "model": "llama3.2:latest",
-    "timeout": 30,
-    "temperature": 0.3,
-    "max_tokens": 500
-  },
-  "integration": {
-    "auto_start_with_launcher": true,
-    "enable_ocr_integration": true,
-    "background_analysis": true,
-    "cache_responses": true
-  },
-  "ui": {
-    "show_notifications": true,
-    "auto_hide_interface": false,
-    "theme": "default"
-  }
+ "ollama": {
+ "base_url": "http/localhost:11434",
+ "model": "llama3.2:latest",
+ "timeout": 30,
+ "temperature": 0.3,
+ "max_tokens": 500
+ },
+ "integration": {
+ "auto_start_with_launcher": true,
+ "enable_ocr_integration": true,
+ "background_analysis": true,
+ "cache_responses": true
+ },
+ "ui": {
+ "show_notifications": true,
+ "auto_hide_interface": false,
+ "theme": "default"
+ }
 }
