@@ -1,28 +1,28 @@
 {
-  "ocr_assistant": {
-    "auto_analysis_delay": 2.0,
-    "min_text_length": 10,
-    "max_history_size": 100,
-    "enable_caching": true,
-    "cache_expiry": 300
-  },
-  "gui": {
-    "window_width": 1400,
-    "window_height": 900,
-    "font_family": "Arial",
-    "font_size": 10,
-    "theme": "default"
-  },
-  "integration": {
-    "enable_ollama_interface": true,
-    "auto_start_ollama": true,
-    "sync_with_overlay": true,
-    "background_processing": true
-  },
-  "notifications": {
-    "show_analysis_complete": true,
-    "show_errors": true,
-    "sound_enabled": false,
-    "desktop_notifications": true
-  }
+ "ocr_assistant": {
+ "auto_analysis_delay": 2.0,
+ "min_text_length": 10,
+ "max_history_size": 100,
+ "enable_caching": true,
+ "cache_expiry": 300
+ },
+ "gui": {
+ "window_width": 1400,
+ "window_height": 900,
+ "font_family": "Arial",
+ "font_size": 10,
+ "theme": "default"
+ },
+ "integration": {
+ "enable_ollama_interface": true,
+ "auto_start_ollama": true,
+ "sync_with_overlay": true,
+ "background_processing": true
+ },
+ "notifications": {
+ "show_analysis_complete": true,
+ "show_errors": true,
+ "sound_enabled": false,
+ "desktop_notifications": true
+ }
 }
